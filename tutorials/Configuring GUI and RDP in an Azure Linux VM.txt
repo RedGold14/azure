@@ -1,1 +1,23 @@
-ff
+1. Connect to VM:
+ssh -i <private key path> <VMUsername>@<public ip address>
+ssh -i <VMUsername>@<public ip address>
+
+2. Install xfce4:
+sudo apt-get update
+sudo apt-get -y install xfce4
+
+3. Install xrdp RDP server:
+sudo apt-get -y install xrdp
+sudo systemctl enable xrdp
+
+4. Tell the server what desktop environment to use on connection establishment:
+echo xfce4-session >~/.xsession
+
+5. Restart the xrdp server to update the changes:
+sudo service xrdp restart
+
+6. Open port 3389:
+az login
+az vm open-port --resource-group <ResourceGroupName> --name <VM name> --port 3389
+
+7. Connect to VM via RDP 
