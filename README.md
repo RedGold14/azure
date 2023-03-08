@@ -8,3 +8,10 @@
 ### Azure DevOps organizations
 ### DevOps Starter
 ### Центр быстрого запуска
+
+---------------------------------------------------
+
+### Assign DNS name
+![alt text](virtual_machines/images/vm_assign_dns_name.jpg)
+
+
